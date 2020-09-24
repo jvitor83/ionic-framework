@@ -10,7 +10,6 @@ test('datetime/picker: focus trap', async () => {
   const ionPickerDidPresent = await page.spyOnEvent('ionPickerDidPresent');
 
   await page.click('#datetime-part');
-  await page.waitForSelector('#datetime-part');
 
   let datetime = await page.find('ion-datetime');
   expect(datetime).not.toBe(null);

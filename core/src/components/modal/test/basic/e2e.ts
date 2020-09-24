@@ -12,7 +12,6 @@ test('modal: focus trap', async () => {
   const ionModalDidPresent = await page.spyOnEvent('ionModalDidPresent');
 
   await page.click('#basic-modal');
-  await page.waitForSelector('#basic-modal');
 
   let modal = await page.find('ion-modal');
   expect(modal).not.toBe(null);
@@ -43,7 +42,6 @@ test('modal: return focus', async () => {
   const ionModalDidPresent = await page.spyOnEvent('ionModalDidPresent');
 
   await page.click('#basic-modal');
-  await page.waitForSelector('#basic-modal');
 
   let modal = await page.find('ion-modal');
   expect(modal).not.toBe(null);
